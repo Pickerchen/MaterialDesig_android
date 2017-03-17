@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sen5.test">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    // Manifest.permission.READ_CONTACTS,
+    // Manifest.permission.RECEIVE_SMS,
+    // Manifest.permission.WRITE_CONTACTS,
+    <application
+        android:name=".activity.Sen5Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+        </activity>
+        <activity android:name=".activity.OtherActivity">
+        </activity>
+        <activity
+            android:name=".mvp.view.UserLoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.WebView"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+        <activity android:name=".materialdesign.MeterialDesignActivity"
+                  android:theme="@style/AppTheme2"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
